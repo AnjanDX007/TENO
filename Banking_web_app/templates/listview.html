@@ -1,0 +1,9 @@
+{% extends 'home.html' %}
+{% block body %}
+    {% for x in user_list %}
+
+            <ul><a href="{% url 'bank:details' pk=x.pk %}">{{ x.name }}</a></ul>
+
+    {% endfor %}
+
+{% endblock %}
